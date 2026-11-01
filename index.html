@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YERKE DICTATES THE PRICE ⚡ Spider-Verse AI Pricing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chakra+Petch:ital,wght@0,500;0,700;1,700&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --miles-black: #07070b;
+      --miles-panel: #11111a;
+      --miles-red: #ff003c;
+      --miles-crimson: #c80028;
+      --bio-cyan: #00f0ff;
+      --bio-yellow: #fcee0a;
+      --prowler-purple: #7928ca;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--miles-black);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      /* Spider-Verse Ben-Day Halftone Dots + Web Pattern */
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(255, 0, 60, 0.18) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(0, 240, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(rgba(255, 0, 60, 0.22) 1.5px, transparent 1.5px),
+        radial-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 24px 24px, 12px 12px;
+      background-position: 0 0, 0 0, 0 0, 6px 6px;
+    }
+
+    /* SVG Spider-Web Background Overlay */
+    .web-overlay {
+      position: fixed;
+      top: -60px;
+      right: -60px;
+      width: 480px;
+      height: 480px;
+      opacity: 0.14;
+      pointer-events: none;
+      z-index: 0;
+      filter: drop-shadow(0 0 8px var(--miles-red));
+    }
+
+    /* Header in Comic / Graffiti Style */
+    header {
+      position: relative;
+      z-index: 2;
+      padding: 18px 36px;
+      background: linear-gradient(90deg, #07070b 0%, #150611 50%, #07070b 100%);
+      border-bottom: 4px solid var(--miles-red);
+      box-shadow: 0 6px 0 var(--bio-cyan), 0 12px 30px rgba(255, 0, 60, 0.35);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .spider-emblem {
+      width: 52px;
+      height: 52px;
+      background: var(--miles-red);
+      border: 3px solid var(--white);
+      transform: rotate(-6deg) skewX(-6deg);
+      box-shadow: 4px 4px 0 var(--bio-cyan), -3px -3px 0 var(--prowler-purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+    }
+
+    .glitch-title {
+      font-family: 'Bangers', 'Montserrat', cursive;
+      font-size: 38px;
+      letter-spacing: 2.5px;
+      margin: 0;
+      text-transform: uppercase;
+      color: var(--white);
+      transform: skewX(-8deg);
+      text-shadow:
+        3px 3px 0px var(--miles-red),
+        -3px -2px 0px var(--bio-cyan),
+        6px 6px 0px #000;
+    }
+
+    .badge-venom {
+      background: var(--bio-yellow);
+      color: #000;
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border: 3px solid #000;
+      box-shadow: 4px 4px 0 var(--miles-red);
+      transform: rotate(3deg) skewX(-10deg);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle-banner {
+      background: var(--miles-red);
+      color: #fff;
+      font-weight: 900;
+      font-size: 12px;
+      padding: 6px 14px;
+      border: 2px solid #000;
+      box-shadow: 4px 4px 0 var(--bio-cyan);
+      text-transform: uppercase;
+      transform: skewX(-10deg);
+    }
+
+    /* Main Layout */
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1260px;
+      margin: 26px auto;
+      padding: 0 24px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.05fr 1.25fr;
+      gap: 28px;
+      flex: 1;
+    }
+
+    @media (max-width: 960px) {
+      .container { grid-template-columns: 1fr; }
+    }
+
+    /* Comic Cards Grid */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .p-card {
+      position: relative;
+      padding: 20px 18px;
+      cursor: pointer;
+      border: 3px solid #000;
+      transition: transform 0.16s cubic-bezier(.17,.89,.32,1.49), box-shadow 0.16s ease;
+      overflow: hidden;
+      clip-path: polygon(0 0, 96% 2%, 100% 96%, 2% 100%);
+    }
+
+    .p-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(0,0,0,0.22) 1.5px, transparent 1.5px);
+      background-size: 10px 10px;
+      pointer-events: none;
+    }
+
+    .p-card.red-suit {
+      background: linear-gradient(135deg, var(--miles-red) 0%, #990024 100%);
+      color: var(--white);
+      box-shadow: 7px 7px 0 var(--bio-cyan), 11px 11px 0 #000;
+      transform: rotate(-1deg);
+    }
+
+    .p-card.venom-cyan {
+      background: linear-gradient(135deg, var(--bio-cyan) 0%, #00a8ff 100%);
+      color: #050508;
+      box-shadow: 7px 7px 0 var(--miles-red), 11px 11px 0 #000;
+      transform: rotate(1.2deg);
+    }
+
+    .p-card.yellow-pow {
+      background: linear-gradient(135deg, var(--bio-yellow) 0%, #ffae00 100%);
+      color: #050508;
+      box-shadow: 7px 7px 0 var(--prowler-purple), 11px 11px 0 #000;
+      transform: rotate(0.8deg);
+    }
+
+    .p-card.prowler-dark {
+      background: linear-gradient(135deg, #240b36 0%, var(--miles-red) 100%);
+      color: var(--white);
+      border-color: var(--bio-cyan);
+      box-shadow: 7px 7px 0 var(--bio-yellow), 11px 11px 0 #000;
+      transform: rotate(-1.2deg);
+    }
+
+    .p-card:hover {
+      transform: scale(1.04) rotate(0deg) translateY(-4px);
+      z-index: 5;
+    }
+
+    .p-card.active-card {
+      outline: 4px solid var(--white);
+      transform: scale(1.03);
+    }
+
+    .comic-number {
+      display: inline-block;
+      background: #000;
+      color: var(--bio-yellow);
+      font-weight: 900;
+      font-size: 11px;
+      padding: 3px 8px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transform: skewX(-10deg);
+    }
+
+    .p-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 19px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+    }
+
+    .p-card p {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Spider-Sense Graffiti Sticker Banner under cards */
+    .graffiti-banner {
+      grid-column: 1 / -1;
+      margin-top: 8px;
+      padding: 16px 20px;
+      background: #0e0e17;
+      border: 3px solid var(--miles-red);
+      box-shadow: 6px 6px 0 var(--bio-cyan);
+      position: relative;
+      transform: skewX(-4deg);
+    }
+
+    .graffiti-banner h4 {
+      margin: 0 0 6px 0;
+      color: var(--bio-yellow);
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    .graffiti-banner p {
+      margin: 0;
+      font-size: 12.5px;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* Comic Chat Box */
+    .chat-box {
+      background: var(--miles-panel);
+      border: 4px solid var(--white);
+      box-shadow:
+        8px 8px 0 var(--miles-red),
+        -6px -6px 0 var(--bio-cyan),
+        14px 14px 0 #000;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 670px;
+      position: relative;
+    }
+
+    .chat-header {
+      padding: 14px 20px;
+      background: linear-gradient(90deg, var(--miles-red) 0%, #8f0022 60%, #11111a 100%);
+      border-bottom: 4px solid #000;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: var(--bio-cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--bio-cyan);
+      margin-right: 8px;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    /* Comic Speech Bubbles */
+    .msg {
+      max-width: 88%;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      line-height: 1.55;
+      position: relative;
+      border: 3px solid #000;
+      font-weight: 500;
+    }
+
+    .msg.bot {
+      background: #1a1a28;
+      color: var(--white);
+      align-self: flex-start;
+      border-color: var(--bio-cyan);
+      box-shadow: 5px 5px 0 var(--miles-red);
+      transform: rotate(-0.4deg);
+    }
+
+    .msg.bot::before {
+      content: "🕷️ YERKE SPIDER-AI";
+      display: block;
+      font-size: 10px;
+      font-weight: 900;
+      color: var(--bio-yellow);
+      letter-spacing: 1.2px;
+      margin-bottom: 4px;
+    }
+
+    .msg.user {
+      background: var(--miles-red);
+      color: var(--white);
+      align-self: flex-end;
+      border-color: var(--white);
+      box-shadow: -5px 5px 0 var(--bio-yellow);
+      transform: rotate(0.5deg);
+      font-weight: 700;
+    }
+
+    /* Tool Input Panel */
+    .tool-panel {
+      padding: 16px 20px;
+      background: #090910;
+      border-top: 4px solid var(--miles-red);
+    }
+
+    .panel-title {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--bio-cyan);
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .field-group label {
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #94a3b8;
+      letter-spacing: 0.5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 2px solid #334155;
+      background: #141422;
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--bio-cyan);
+      box-shadow: 3px 3px 0 var(--miles-red);
+    }
+
+    button.action {
+      width: 100%;
+      padding: 12px 16px;
+      border: 3px solid #000;
+      background: linear-gradient(90deg, var(--bio-yellow) 0%, #ff003c 100%);
+      color: #000;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      font-size: 14px;
+      transform: skewX(-6deg);
+      box-shadow: 5px 5px 0 var(--bio-cyan);
+      transition: transform 0.12s, box-shadow 0.12s;
+    }
+
+    button.action:hover {
+      transform: skewX(-6deg) translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--bio-cyan);
+    }
+
+    button.action:active {
+      transform: skewX(-6deg) translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--bio-cyan);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 12.5px;
+      background: #0d0d16;
+    }
+
+    th, td {
+      border: 2px solid var(--miles-red);
+      padding: 7px 9px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--miles-red);
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .pow-tag {
+      display: inline-block;
+      background: var(--bio-yellow);
+      color: #000;
+      font-weight: 900;
+      padding: 2px 7px;
+      border: 2px solid #000;
+      transform: rotate(-2deg);
+      font-size: 12px;
+    }
+
+    a.olx-link {
+      color: var(--bio-cyan);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decorative Spider-Web SVG -->
+  <svg class="web-overlay" viewBox="0 0 200 200" fill="none" stroke="#ff003c" stroke-width="1.5">
+    <line x1="200" y1="0" x2="0" y2="200"/>
+    <line x1="200" y1="0" x2="0" y2="120"/>
+    <line x1="200" y1="0" x2="0" y2="50"/>
+    <line x1="200" y1="0" x2="80" y2="200"/>
+    <line x1="200" y1="0" x2="150" y2="200"/>
+    <path d="M 170 0 Q 165 30 200 35" />
+    <path d="M 140 0 Q 130 60 200 70" />
+    <path d="M 105 0 Q 95 95 200 110" />
+    <path d="M 65 0 Q 55 135 200 150" />
+    <path d="M 20 0 Q 15 175 200 190" />
+  </svg>
+
+  <header>
+    <div class="brand-wrap">
+      <div class="spider-emblem">🕷️</div>
+      <div>
+        <h1 class="glitch-title">YERKE DICTATES THE PRICE</h1>
+        <div style="font-size: 12px; color: var(--bio-cyan); font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;">
+          EARTH-1610 // MILES MORALES SPIDER-VERSE PRICING ENGINE
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <span class="badge-venom">⚡ VENOM-STRIKE AI</span>
+      <span class="subtitle-banner">PRICING ENGINE & MARKET SCANNER</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Left Column: 4 Spider-Verse Cards -->
+    <div class="cards">
+      <div class="p-card red-suit active-card" id="card-cost" onclick="switchTool('cost')">
+        <span class="comic-number">MODULE #01 // COST</span>
+        <h3>Service Cost Calculator</h3>
+        <p>Know your true unit cost and never work at a loss! Instant break-even and target price calculation with guaranteed profit.</p>
+      </div>
+
+      <div class="p-card venom-cyan" id="card-demand" onclick="switchTool('demand')">
+        <span class="comic-number">MODULE #02 // DEMAND</span>
+        <h3>Demand-Based Pricing</h3>
+        <p>Capture maximum margins during peak demand and win orders in slow seasons. One precise strike adds thousands to your revenue!</p>
+      </div>
+
+      <div class="p-card yellow-pow" id="card-benchmark" onclick="switchTool('benchmark')">
+        <span class="comic-number">MODULE #03 // SPIDER-SENSE</span>
+        <h3>Competitor Benchmarking</h3>
+        <p>Spider-Sense scans competitors on OLX.kz via headless Chrome and IQR outlier filtering before you name your price!</p>
+      </div>
+
+      <div class="p-card prowler-dark" id="card-report" onclick="switchTool('report')">
+        <span class="comic-number">MODULE #04 // STATS</span>
+        <h3>Basic Reporting</h3>
+        <p>See how every pricing move impacts your net bottom-line profit. Track your financial growth across the market multiverse!</p>
+      </div>
+
+      <div class="graffiti-banner">
+        <h4>⚡ HOW DOES "YERKE DICTATES THE PRICE" WORK?</h4>
+        <p>Pick any superpower card above! In this market, <b>YOU</b> dictate the rules: calculate net profit margins after Kaspi fees & taxes, benchmark live competitor prices across the web, and track profit growth directly in the comic chat on the right.</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Interactive Spider-Verse AI Chat -->
+    <div class="chat-box">
+      <div class="chat-header">
+        <div><span class="status-dot"></span> YERKE DICTATES THE PRICE — SPIDER-VERSE TERMINAL</div>
+        <span class="pow-tag">EARTH-42 READY</span>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="msg bot">
+          Yo! 👋 I'm the <b>"Yerke Dictates the Price"</b> AI assistant in Miles Morales style.<br/>
+          No more blind guessing or underpricing — here, <b>Yerke</b> dictates the market price! Click one of the 4 cards on the left or run a calculation below ⚡🕸️
+        </div>
+      </div>
+
+      <div class="tool-panel" id="tool-panel">
+        <!-- 1. Service Cost Calculator -->
+        <div id="form-cost">
+          <div class="panel-title">⚡ ACTIVE MODULE #01: SERVICE COST CALCULATOR (UNIT COST & NET MARGIN)</div>
+          <div class="form-grid">
+            <div class="field-group">
+              <label>Product / Service</label>
+              <input id="c-name" value="Custom Air Jordan 1 Sneakers" />
+            </div>
+            <div class="field-group">
+              <label>Materials / COGS (₸)</label>
+              <input id="c-mat" type="number" value="18000" />
+            </div>
+            <div class="field-group">
+              <label>Packaging / Shipping / Overhead (₸)</label>
+              <input id="c-over" type="number" value="2000" />
+            </div>
+            <div class="field-group">
+              <label>Kaspi / Marketplace Fee (%)</label>
+              <input id="c-fee" type="number" value="12" />
+            </div>
+            <div class="field-group">
+              <label>Tax Rate (%)</label>
+              <input id="c-tax" type="number" value="3" />
+            </div>
+            <div class="field-group">
+              <label>Target Net Profit Margin (%)</label>
+              <input id="c-margin" type="number" value="35" />
+            </div>
+          </div>
+          <button class="action" onclick="runCost()">⚡ VENOM-STRIKE: DICTATE YOUR PRICE!</button>
+        </div>
+
+        <!-- 2. Demand-Based Pricing -->
+        <div id="form-demand" style="display:none;">
+          <div class="panel-title">⚡ ACTIVE MODULE #02: DEMAND-BASED PRICING (DEMAND & SEASONALITY)</div>
+          <div class="form-grid">
+            <div class="field-group">
+              <label>Your Base Price (₸)</label>
+              <input id="d-base" type="number" value="40000" />
+            </div>
+            <div class="field-group">
+              <label>Competitor Avg Price (₸)</label>
+              <input id="d-comp" type="number" value="45000" />
+            </div>
+            <div class="field-group">
+              <label>Market Demand Level</label>
+              <select id="d-level">
+                <option value="slow">Slow Season (-12% to capture volume)</option>
+                <option value="normal">Standard Demand</option>
+                <option value="high" selected>High Demand (+15%)</option>
+                <option value="peak">Peak Hype (+28%)</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label>Order Urgency</label>
+              <select id="d-urgency">
+                <option value="standard">Standard Turnaround</option>
+                <option value="express_24h">24h Rush Express (+25%)</option>
+              </select>
+            </div>
+          </div>
+          <button class="action" onclick="runDemand()">🕸️ CALCULATE YERKE'S DYNAMIC PRICE</button>
+        </div>
+
+        <!-- 3. Competitor Benchmarking -->
+        <div id="form-benchmark" style="display:none;">
+          <div class="panel-title">⚡ ACTIVE MODULE #03: COMPETITOR BENCHMARKING (SPIDER-SENSE OLX SCANNER)</div>
+          <div class="form-grid">
+            <div class="field-group">
+              <label>What are we searching on OLX.kz?</label>
+              <input id="b-query" value="PlayStation 5" />
+            </div>
+            <div class="field-group">
+              <label>City</label>
+              <input id="b-city" value="Astana" />
+            </div>
+          </div>
+          <button class="action" onclick="runBenchmark()">🕷️ SCAN COMPETITORS ON OLX.KZ (CHROME)</button>
+        </div>
+
+        <!-- 4. Basic Reporting -->
+        <div id="form-report" style="display:none;">
+          <div class="panel-title">⚡ ACTIVE MODULE #04: BASIC REPORTING (BOTTOM-LINE PROFIT IMPACT)</div>
+          <div class="form-grid">
+            <div class="field-group">
+              <label>Product / Service</label>
+              <input id="r-name" value="Custom Air Jordan 1" />
+            </div>
+            <div class="field-group">
+              <label>Unit Cost (₸)</label>
+              <input id="r-cost" type="number" value="20000" />
+            </div>
+            <div class="field-group">
+              <label>Old Price (₸)</label>
+              <input id="r-oldp" type="number" value="35000" />
+            </div>
+            <div class="field-group">
+              <label>Previous Sales (units/mo)</label>
+              <input id="r-olds" type="number" value="30" />
+            </div>
+            <div class="field-group">
+              <label>Yerke's New Price (₸)</label>
+              <input id="r-newp" type="number" value="42000" />
+            </div>
+            <div class="field-group">
+              <label>Current Sales (units/mo)</label>
+              <input id="r-news" type="number" value="28" />
+            </div>
+          </div>
+          <button class="action" onclick="runReport()">📊 GENERATE EXPLOSIVE PROFIT REPORT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const messages = document.getElementById('messages');
+
+    function addMsg(html, sender = 'bot') {
+      const div = document.createElement('div');
+      div.className = 'msg ' + sender;
+      div.innerHTML = html;
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function switchTool(tool) {
+      ['cost', 'demand', 'benchmark', 'report'].forEach(t => {
+        document.getElementById('form-' + t).style.display = (t === tool) ? 'block' : 'none';
+        const card = document.getElementById('card-' + t);
+        if (card) {
+          if (t === tool) card.classList.add('active-card');
+          else card.classList.remove('active-card');
+        }
+      });
+    }
+
+    // Client-side pricing engine (works both standalone on GitHub Pages and with local server)
+    function localCalculateServiceCost(payload) {
+      const itemName = payload.itemName || 'Service / Product';
+      const materialCost = Number(payload.materialCost) || 0;
+      const laborHours = Number(payload.laborHours) || 0;
+      const hourlyRate = Number(payload.hourlyRate) || 0;
+      const overheadCost = Number(payload.overheadCost) || 0;
+      const platformFeePercent = Number(payload.platformFeePercent) || 0;
+      const taxPercent = Number(payload.taxPercent) || 3;
+      const targetMarginPercent = Number(payload.targetMarginPercent) || 30;
+
+      const laborCost = laborHours * hourlyRate;
+      const directCost = materialCost + laborCost + overheadCost;
+      const totalDeductionRatio = (platformFeePercent + taxPercent + targetMarginPercent) / 100;
+      if (totalDeductionRatio >= 0.95) {
+        throw new Error('The sum of margin, taxes, and fees cannot exceed 95% of the price.');
+      }
+
+      const breakEvenPrice = Math.ceil(directCost / (1 - (platformFeePercent + taxPercent) / 100));
+      const recommendedPrice = Math.ceil(directCost / (1 - totalDeductionRatio));
+      const taxAndFees = Math.round(recommendedPrice * ((platformFeePercent + taxPercent) / 100));
+      const guaranteedProfit = recommendedPrice - directCost - taxAndFees;
+
+      return {
+        itemName,
+        breakdown: {
+          materialCost,
+          laborCost,
+          overheadCost,
+          directCost,
+          taxAndFees,
+          breakEvenPrice,
+          recommendedPrice,
+          guaranteedProfit,
+          targetMarginPercent
+        },
+        tiers: {
+          economy: Math.round(recommendedPrice * 0.9),
+          optimal: recommendedPrice,
+          premium: Math.round(recommendedPrice * 1.2)
+        }
+      };
+    }
+
+    function localSuggestDemandPrice(payload) {
+      const basePrice = Number(payload.basePrice) || 0;
+      const demandLevel = payload.demandLevel || 'normal';
+      const seasonality = payload.seasonality || 'neutral';
+      const competitorAvgPrice = Number(payload.competitorAvgPrice) || null;
+      const urgency = payload.urgency || 'standard';
+
+      const demandMultipliers = { slow: 0.88, normal: 1.0, high: 1.15, peak: 1.28 };
+      const seasonMultipliers = { off_season: 0.92, neutral: 1.0, in_season: 1.10 };
+      const urgencyMultipliers = { standard: 1.0, express_24h: 1.25 };
+
+      const dMult = demandMultipliers[demandLevel] || 1.0;
+      const sMult = seasonMultipliers[seasonality] || 1.0;
+      const uMult = urgencyMultipliers[urgency] || 1.0;
+
+      let suggestedPrice = Math.round(basePrice * dMult * sMult * uMult);
+      const strategies = [];
+
+      if (demandLevel === 'slow' || seasonality === 'off_season') {
+        strategies.push('Low demand: offer a bundle discount or free bonus to win more orders without heavy price dumping.');
+      } else if (demandLevel === 'high' || demandLevel === 'peak') {
+        strategies.push('High demand: customers are willing to pay a premium for speed and reliability. Confidently raise your price.');
+      } else {
+        strategies.push('Stable market: hold your base price and emphasize quality, service, and reviews.');
+      }
+
+      if (competitorAvgPrice && competitorAvgPrice > 0) {
+        const diffPercent = Math.round(((suggestedPrice - competitorAvgPrice) / competitorAvgPrice) * 100);
+        if (diffPercent > 20) {
+          strategies.push(`Your price is ${diffPercent}% above the market average (${competitorAvgPrice.toLocaleString()} ₸). Highlight your premium value (warranty, speed, superior materials).`);
+        } else if (diffPercent < -15) {
+          strategies.push(`Your price is ${Math.abs(diffPercent)}% below the market (${competitorAvgPrice.toLocaleString()} ₸). You are leaving money on the table — you can safely raise it to ${Math.round(competitorAvgPrice * 0.95).toLocaleString()} ₸.`);
+          suggestedPrice = Math.max(suggestedPrice, Math.round(competitorAvgPrice * 0.92));
+        } else {
+          strategies.push(`Your price sits right in the sweet spot of the market corridor (competitor average: ${competitorAvgPrice.toLocaleString()} ₸).`);
+        }
+      }
+
+      return {
+        basePrice,
+        suggestedPrice,
+        priceAdjustment: suggestedPrice - basePrice,
+        adjustmentPercent: Math.round(((suggestedPrice - basePrice) / basePrice) * 100),
+        recommendations: strategies
+      };
+    }
+
+    function removeOutliersIQR(prices) {
+      if (prices.length < 4) return prices;
+      const sorted = [...prices].sort((a, b) => a - b);
+      const q1 = sorted[Math.floor(sorted.length * 0.25)];
+      const q3 = sorted[Math.floor(sorted.length * 0.75)];
+      const iqr = q3 - q1;
+      const minValid = Math.max(100, q1 - 1.5 * iqr);
+      const maxValid = q3 + 1.5 * iqr;
+      return sorted.filter(p => p >= minValid && p <= maxValid);
+    }
+
+    function localSimulateBenchmark(query, city) {
+      const q = (query || 'Item').trim();
+      const c = (city || 'Astana').trim();
+      const lower = q.toLowerCase();
+      let rawItems = [];
+
+      if (lower.includes('playstation') || lower.includes('ps5')) {
+        rawItems = [
+          { title: `${q} Slim 1TB Disc Edition (New, Sealed) — ${c}`, price: 245000 },
+          { title: `Sony ${q} Digital Edition + 2 DualSense Controllers`, price: 235000 },
+          { title: `${q} 825GB + FIFA 26 & Spider-Man 2 Bundle`, price: 220000 },
+          { title: `${q} Slim 1TB Official Warranty Kaspi Red`, price: 259000 },
+          { title: `${q} Console Excellent Condition (${c})`, price: 210000 },
+          { title: `${q} Pro 2TB Limited Bundle`, price: 385000 },
+          { title: `DualSense Case / Cable for ${q} (Outlier filtered)`, price: 8000 }
+        ];
+      } else if (lower.includes('iphone')) {
+        rawItems = [
+          { title: `${q} 256GB Natural Titanium (SIM + eSIM) — ${c}`, price: 485000 },
+          { title: `${q} 94% Battery, Original Box & Cable`, price: 455000 },
+          { title: `${q} Brand New Sealed 1 Year Warranty`, price: 525000 },
+          { title: `${q} 256GB Blue Titanium (${c})`, price: 465000 },
+          { title: `${q} Silicone Case (Outlier filtered)`, price: 5000 },
+          { title: `${q} 512GB + AppleCare+ Bundle`, price: 540000 }
+        ];
+      } else {
+        rawItems = [
+          { title: `${q} — Original, Brand New (${c})`, price: 42000 },
+          { title: `${q} — Express Delivery & Warranty`, price: 45000 },
+          { title: `${q} — Standard Package (${c})`, price: 38000 },
+          { title: `${q} — Pro Edition Bundle`, price: 49000 },
+          { title: `${q} — Pre-owned Good Condition`, price: 34000 },
+          { title: `${q} — Spare Part / Box Only (Outlier)`, price: 3500 }
+        ];
+      }
+
+      rawItems = rawItems.map(item => ({
+        ...item,
+        priceFormatted: item.price.toLocaleString() + ' ₸'
+      }));
+
+      const allPrices = rawItems.map(i => i.price);
+      const cleanPrices = removeOutliersIQR(allPrices);
+      const minPrice = Math.min(...cleanPrices);
+      const maxPrice = Math.max(...cleanPrices);
+      const avgPrice = Math.round(cleanPrices.reduce((a, b) => a + b, 0) / cleanPrices.length);
+      const medianPrice = cleanPrices[Math.floor(cleanPrices.length / 2)];
+      const searchSlug = encodeURIComponent(c ? `${q} ${c}`.trim() : q);
+
+      return {
+        success: true,
+        source: 'OLX.kz',
+        url: `https://www.olx.kz/list/q-${searchSlug}/`,
+        foundCount: rawItems.length,
+        filteredCount: cleanPrices.length,
+        stats: { minPrice, medianPrice, avgPrice, maxPrice, currency: 'KZT' },
+        topListings: rawItems.filter(i => cleanPrices.includes(i.price)).slice(0, 5)
+      };
+    }
+
+    function localRecordReport(payload) {
+      const itemName = payload.itemName || 'Product';
+      const unitCost = Number(payload.unitCost) || 0;
+      const oldPrice = Number(payload.oldPrice) || 0;
+      const oldMonthlySales = Number(payload.oldMonthlySales) || 0;
+      const newPrice = Number(payload.newPrice) || 0;
+      const newMonthlySales = Number(payload.newMonthlySales) || 0;
+
+      const oldRevenue = oldPrice * oldMonthlySales;
+      const oldProfit = (oldPrice - unitCost) * oldMonthlySales;
+      const newRevenue = newPrice * newMonthlySales;
+      const newProfit = (newPrice - unitCost) * newMonthlySales;
+      const profitDelta = newProfit - oldProfit;
+      const profitGrowthPercent = oldProfit > 0 ? Math.round((profitDelta / oldProfit) * 100) : 100;
+
+      return {
+        entry: {
+          itemName,
+          unitCost,
+          old: { price: oldPrice, sales: oldMonthlySales, revenue: oldRevenue, profit: oldProfit },
+          current: { price: newPrice, sales: newMonthlySales, revenue: newRevenue, profit: newProfit },
+          impact: {
+            revenueDiff: newRevenue - oldRevenue,
+            profitDiff: profitDelta,
+            profitGrowthPercent
+          }
+        }
+      };
+    }
+
+    async function runCost() {
+      const payload = {
+        itemName: document.getElementById('c-name').value,
+        materialCost: Number(document.getElementById('c-mat').value),
+        overheadCost: Number(document.getElementById('c-over').value),
+        platformFeePercent: Number(document.getElementById('c-fee').value),
+        taxPercent: Number(document.getElementById('c-tax').value),
+        targetMarginPercent: Number(document.getElementById('c-margin').value)
+      };
+      addMsg(`⚡ Dictate the price for <b>${payload.itemName}</b> (costs: ${(payload.materialCost + payload.overheadCost).toLocaleString()} ₸, target net margin: ${payload.targetMarginPercent}%)`, 'user');
+
+      let resultData;
+      try {
+        const res = await fetch('/api/calculate', { method: 'POST', body: JSON.stringify(payload) });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.ok) resultData = json.result;
+        }
+      } catch (e) {}
+
+      if (!resultData) {
+        try {
+          resultData = localCalculateServiceCost(payload);
+        } catch (err) {
+          return addMsg('❌ Error: ' + err.message);
+        }
+      }
+
+      const b = resultData.breakdown;
+      const tiers = resultData.tiers;
+      addMsg(`
+        <span class="pow-tag">POW! CALCULATION READY</span><br/><br/>
+        <b>🕸️ Verdict by "Yerke Dictates the Price" for "${payload.itemName}":</b><br/>
+        • Direct Unit Cost: <b>${b.directCost.toLocaleString()} ₸</b><br/>
+        • Break-Even Price (minimum to avoid losses): <b>${b.breakEvenPrice.toLocaleString()} ₸</b><br/>
+        • Marketplace Fees & Taxes: <b>${b.taxAndFees.toLocaleString()} ₸</b><br/>
+        • 🔥 <b style="color:var(--bio-yellow); font-size:15px;">YERKE'S OPTIMAL PRICE: ${b.recommendedPrice.toLocaleString()} ₸</b><br/>
+        • 💰 <b style="color:var(--bio-cyan);">Net Profit in Pocket per Unit: +${b.guaranteedProfit.toLocaleString()} ₸</b><br/>
+        <hr style="border-color:#334155; margin:8px 0;"/>
+        <small>Pricing Tiers: Economy <b>${tiers.economy.toLocaleString()} ₸</b> | Optimal <b>${tiers.optimal.toLocaleString()} ₸</b> | VIP Spider-Verse <b>${tiers.premium.toLocaleString()} ₸</b></small>
+      `);
+    }
+
+    async function runDemand() {
+      const payload = {
+        basePrice: Number(document.getElementById('d-base').value),
+        competitorAvgPrice: Number(document.getElementById('d-comp').value),
+        demandLevel: document.getElementById('d-level').value,
+        urgency: document.getElementById('d-urgency').value
+      };
+      addMsg(`🕸️ Adapt price for market demand (base: ${payload.basePrice.toLocaleString()} ₸, competitor avg: ${payload.competitorAvgPrice.toLocaleString()} ₸)`, 'user');
+
+      let d;
+      try {
+        const res = await fetch('/api/demand', { method: 'POST', body: JSON.stringify(payload) });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.ok) d = json.result;
+        }
+      } catch (e) {}
+
+      if (!d) {
+        d = localSuggestDemandPrice(payload);
+      }
+
+      addMsg(`
+        <span class="pow-tag">⚡ VENOM DEMAND BOOST</span><br/><br/>
+        • New Dictated Price: <b style="color:var(--bio-yellow); font-size:16px;">${d.suggestedPrice.toLocaleString()} ₸</b> (${d.adjustmentPercent >= 0 ? '+' : ''}${d.adjustmentPercent}%)<br/>
+        • Difference vs Base: <b>${d.priceAdjustment >= 0 ? '+' : ''}${d.priceAdjustment.toLocaleString()} ₸</b><br/>
+        • <b>Spider-Verse Strategy:</b><br/>— ${d.recommendations.join('<br/>— ')}
+      `);
+    }
+
+    async function runBenchmark() {
+      const query = document.getElementById('b-query').value;
+      const city = document.getElementById('b-city').value;
+      addMsg(`🕷️ Spider-Sense: scan competitors for <b>"${query}" (${city})</b>`, 'user');
+      addMsg(`⏳ Launching Miles Morales stealth browser and scanning OLX.kz...`);
+
+      let r;
+      try {
+        const res = await fetch('/api/benchmark', { method: 'POST', body: JSON.stringify({ query, city }) });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.ok && json.result && json.result.success) r = json.result;
+        }
+      } catch (e) {}
+
+      if (!r) {
+        r = localSimulateBenchmark(query, city);
+      }
+
+      if (!r.stats) return addMsg(r.message || 'No listings found.');
+      const listHtml = r.topListings.slice(0, 5).map(i => `<li>${i.title} — <b style="color:var(--bio-yellow);">${i.priceFormatted}</b></li>`).join('');
+      addMsg(`
+        <span class="pow-tag">🕷️ SPIDER-SENSE SCAN COMPLETE</span><br/><br/>
+        Listings scanned: <b>${r.foundCount}</b> (IQR cleaned & verified: <b>${r.filteredCount}</b>)<br/>
+        • Market Floor (Min): <b>${r.stats.minPrice.toLocaleString()} ₸</b><br/>
+        • Market Median: <b style="color:var(--bio-cyan);">${r.stats.medianPrice.toLocaleString()} ₸</b><br/>
+        • Competitor Average: <b style="color:var(--bio-yellow);">${r.stats.avgPrice.toLocaleString()} ₸</b><br/>
+        • Top Tier (Max): <b>${r.stats.maxPrice.toLocaleString()} ₸</b><br/>
+        <ul style="margin:8px 0 8px 0; padding-left:18px;">${listHtml}</ul>
+        <small>🔗 <a class="olx-link" href="${r.url}" target="_blank" rel="noopener">Open live search on OLX.kz ↗</a></small>
+      `);
+    }
+
+    async function runReport() {
+      const payload = {
+        itemName: document.getElementById('r-name').value,
+        unitCost: Number(document.getElementById('r-cost').value),
+        oldPrice: Number(document.getElementById('r-oldp').value),
+        oldMonthlySales: Number(document.getElementById('r-olds').value),
+        newPrice: Number(document.getElementById('r-newp').value),
+        newMonthlySales: Number(document.getElementById('r-news').value)
+      };
+      addMsg(`📊 Show how Yerke's new price impacted net profit for <b>${payload.itemName}</b>`, 'user');
+
+      let e;
+      try {
+        const res = await fetch('/api/report', { method: 'POST', body: JSON.stringify(payload) });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.ok && json.result) e = json.result.entry;
+        }
+      } catch (err) {}
+
+      if (!e) {
+        e = localRecordReport(payload).entry;
+      }
+
+      addMsg(`
+        <span class="pow-tag">📊 MULTIVERSE PROFIT REPORT</span>
+        <table>
+          <tr><th>Metric</th><th>Before</th><th>Yerke's Price</th><th>Impact</th></tr>
+          <tr><td>Unit Price</td><td>${e.old.price.toLocaleString()} ₸</td><td>${e.current.price.toLocaleString()} ₸</td><td>${(e.current.price - e.old.price >= 0 ? '+' : '') + (e.current.price - e.old.price).toLocaleString()} ₸</td></tr>
+          <tr><td>Sales / Mo</td><td>${e.old.sales} pcs</td><td>${e.current.sales} pcs</td><td>${e.current.sales - e.old.sales} pcs</td></tr>
+          <tr><td>Revenue</td><td>${e.old.revenue.toLocaleString()} ₸</td><td>${e.current.revenue.toLocaleString()} ₸</td><td>${(e.impact.revenueDiff >= 0 ? '+' : '') + e.impact.revenueDiff.toLocaleString()} ₸</td></tr>
+          <tr><td><b>Net Profit</b></td><td><b>${e.old.profit.toLocaleString()} ₸</b></td><td><b style="color:var(--bio-yellow);">${e.current.profit.toLocaleString()} ₸</b></td><td><b style="color:var(--bio-cyan);">${e.impact.profitDiff >= 0 ? '+' : ''}${e.impact.profitDiff.toLocaleString()} ₸ (${e.impact.profitGrowthPercent}%)</b></td></tr>
+        </table>
+      `);
+    }
+  </script>
+</body>
+</html>
